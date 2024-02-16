@@ -1,0 +1,9 @@
+<%- include('./header.ejs') %>
+<div class="main">
+    <div class="error-container">
+        <% if(locals.error_msg != null) {%>
+            <p><%= error_msg %></p>
+        <% } %>
+        <button class="btn"><a href="/sign_up">Retrun</a></button>
+    </div>
+</div>

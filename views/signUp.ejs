@@ -1,0 +1,25 @@
+<%- include('./header.ejs') %>
+<div class="main">
+    <div class="container">
+        <h1 class="heading"><%= title%> Now</h1>
+        <div class="line"></div>
+        <form action="/sign_up" method="post">
+            <input required type="text" name="username" placeholder="username">
+            <input required type="email" name="email" placeholder="vesp email id">
+            <input required type="password" name="password" placeholder="password">
+            <div class="job">
+                <p>Choose your occupation:</p>
+                <label>Student</label>
+                <input required type="radio" name="job" value="student" class="radio-btn">
+                <label>| Parent</label>
+                <input required type="radio" name="job" value="Parent" class="radio-btn">
+                <label>| Teacher</label>
+                <input required type="radio" name="job" value="teacher" class="radio-btn">
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="line"></div>
+            <p>Already logined in?</p>
+            <button class="btn" type="button"><a href="/login">Login</a></button>
+        </form>
+    </div>
+</div>

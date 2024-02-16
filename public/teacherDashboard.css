@@ -1,0 +1,43 @@
+.teacher-div {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(164, 131, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#teacher-interface {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 45px 20px 70px 20px;
+    width: 600px;
+    text-align: center;
+}
+
+h2 {
+    color: #343a40;
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.interface-link {
+    display: block;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(130, 86, 251);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.interface-link:hover {
+    background-color: black;
+    color: white;
+}

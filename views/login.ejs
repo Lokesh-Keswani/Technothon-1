@@ -1,0 +1,35 @@
+<%- include('./header.ejs') %>
+
+<div class="main">
+  <div class="container-l">
+    <h1 class="heading">Login Now</h1>
+    <div class="line"></div>
+    <form action="/login" method="post">
+      <input
+        required
+        type="text"
+        name="username"
+        placeholder="username"
+        value="teacher"
+      />
+      <input
+        required
+        type="email"
+        name="email"
+        placeholder="vesp email id"
+        value="teacher@ves.ac.in"
+      />
+      <input
+        required
+        type="password"
+        name="password"
+        placeholder="password"
+        value="teacher"
+      />
+      <button type="submit" class="btn">Login</button>
+      <div class="line"></div>
+      <p>Not logined in?</p>
+      <button class="btn"><a href="/sign_up">Sign up</a></button>
+    </form>
+  </div>
+</div>

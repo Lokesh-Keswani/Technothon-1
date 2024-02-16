@@ -1,0 +1,12 @@
+<%- include('./header.ejs') %>
+<h1>List of class</h1>
+<hr />
+<div>
+  <% classroom.forEach(class => { %>
+  <div>
+    <h1><%= class.name %></h1>
+    <p><%= class.branch %></p>
+    <a href="/dashboard/classroom/<%= class.id %>">Visit Class</a>
+  </div>
+  <% }); %>
+</div>

@@ -1,0 +1,111 @@
+<%- include('./header.ejs') %>
+
+<section id="Notes-list">
+  <h2>Notes List</h2>
+  <div class="hr"></div>
+  <div id="notesList">
+    <% notes.forEach(note => { %> <% let cDate = note.createdAt %> <% const
+    monthNames = [ "Jan", "Feb", "March", "April", "May", "June", "July", "Aug",
+    "Sep", "Oct", "Nov", "Dec" ]; %> <% let currentDate = ` ${cDate.getDate()}
+    ${monthNames[cDate.getMonth()]}, ${cDate.getFullYear()} ` %>
+    <div class="notes">
+      <div class="head">
+        <h2 class="notes-title"><%= note.title %></h2>
+        <h2 class="notes-title">Created At: <%= currentDate %></h2>
+      </div>
+      <div class="hr"></div>
+      <p class="notes-content"><%= note.content %></p>
+      <% if (note.fileUrl) { %>
+      <a href="<%= note.fileUrl %>" target="_blank" rel="noopener noreferrer"
+        >File</a
+      >
+      <% } %>
+    </div>
+    <% }); %>
+  </div>
+</section>
+<section id="Upload">
+  <h2>Upload Notes</h2>
+  <!-- enctype="multipart/form-data" -->
+
+  <form action="/dashboard/notes" method="post" id="notesForm">
+    <label for="noteTitle">Note Title:</label>
+    <input type="text" id="noteTitle" name="noteTitle" />
+
+    <label for="noteContent">Note Content:</label>
+    <textarea id="noteContent" name="noteContent" rows="4"></textarea>
+
+    <label for="file">Select a document:</label>
+    <input type="file" id="notes-file" name="file" accept=".pdf, .doc, .docx" />
+
+    <center><button type="submit">Upload Note</button></center>
+  </form>
+</section>
+<!-- <script>// notes.js
+
+    console.log("ghigh;h");
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        // DOM elements
+        let noteTitleInput = document.getElementById('noteTitle');
+        let noteContentTextarea = document.getElementById('noteContent');
+        let fileInput = document.getElementById('file');
+        let notesListContainer = document.getElementById('notesList');
+        let uploadForm = document.querySelector('form');
+    
+        // Event listener for form submission
+        uploadForm.addEventListener('submit', function (event) {
+         // Prevent default form submission behavior
+    
+            // Extract values from form inputs
+            let title = noteTitleInput.value;
+            let content = noteContentTextarea.value;
+            let file = fileInput.files[0];
+    
+            // Perform any necessary validation here
+    
+            // Create a new note element
+            let newNote = createNoteElement(title, content);
+    
+            // Append the new note to the notes list container
+            notesListContainer.appendChild(newNote);
+    
+            // Optional: Send data to the server using fetch or XMLHttpRequest
+            // Example using fetch:
+            // fetch('upload.php', {
+            //     method: 'POST',
+            //     body: new FormData(uploadForm),
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log('Server response:', data);
+            // })
+            // .catch(error => {
+            //     console.error('Error:', error);
+            // });
+    
+            // Clear form inputs
+            noteTitleInput.value = '';
+            noteContentTextarea.value = '';
+            fileInput.value = '';
+        });
+    
+        // Function to create a new note element
+        function createNoteElement(title, content) {
+            let noteContainer = document.createElement('div');
+            noteContainer.className = 'note';
+    
+            let noteHeader = document.createElement('div');
+            noteHeader.className = 'note-header';
+            noteHeader.textContent = title;
+    
+            let noteContent = document.createElement('div');
+            noteContent.className = 'note-content';
+            noteContent.textContent = content;
+    
+            noteContainer.appendChild(noteHeader);
+            noteContainer.appendChild(noteContent);
+    
+            return noteContainer;
+        }
+    });</script> -->

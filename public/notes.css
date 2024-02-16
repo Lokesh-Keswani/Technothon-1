@@ -1,0 +1,77 @@
+#Upload {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(194, 172, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+}
+
+h2 {
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+button {
+    background-color: rgb(130, 86, 251);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    padding: 13px 23px;
+}
+
+#Notes-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(194, 172, 255);
+    border-radius: 30px;
+}
+.notes{
+    border:2px solid white;
+    border-radius:20px;
+    margin: 10px;
+    padding: 10px;
+}
+.notes-title{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.hr{
+    padding: 1px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+}

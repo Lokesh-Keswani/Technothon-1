@@ -1,0 +1,34 @@
+<%- include('./header.ejs') %>
+<div class="b">
+    <form action="/dashboard/classroom" method="post">
+    <section id="class">
+        <div class="nameOfClass">
+            <label for="className"><b>Enter Name Of Classroom:</b></label>
+    
+            <input required type="text" id="classroomTitle" name="classroomTitle">
+    
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="choose">
+            <h1 class="programs"><span class="program">Program :</span><br><br><label for="Program">Choose a
+                    Program</label>
+                <select name="Program_names" id="Program-names">
+                    <option value="CO">CO</option>
+                    <option value="EE">EE</option>
+                    <option value="EJ">EJ</option>
+                    <option value="AO">AO</option>
+                    <option value="ME">ME</option>
+                    <option value="CE">CE</option>
+                </select>
+            </h1>
+        </div>
+        <br>
+        <br>
+    
+        <button type="submit" class="btn">Create</button>
+    
+    </section>
+</form>
+</div>

@@ -1,0 +1,74 @@
+:root{
+    --main-color:rgb(164, 131, 255);
+    --secondary-color:rgb(194, 172, 255);
+    --main-font-family:cursive;
+}
+.b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#class {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 70px 20px 70px 20px;
+    width: 600px;
+    text-align: center;
+}
+
+.nameOfClass {
+    border-radius: 8px;
+    border-color: #ffffff;
+    background-color: var(--main-color);
+    padding: 15px;
+}
+
+.choose {
+    border-radius: 8px;
+    border-color: #ffffff;
+    background-color: var(--main-color);
+    padding: 15px;
+
+}
+
+h1 {
+    text-align: left;
+}
+
+/* .a {
+    background-color: rgb(130, 86, 251);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+} */
+
+.a:hover {
+    background-color: black;
+    color: white;
+    padding: 13px 23px;
+    transition: 0.5s;
+}
+
+#classroomTitle {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.programs {
+    text-align: center;
+}
+
+.program {
+    font-size: 38px;
+}
+
+label {
+    font-size: 30px;
+}

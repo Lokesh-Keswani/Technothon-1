@@ -1,0 +1,41 @@
+:root{
+    --main-color:rgb(164, 131, 255);
+    --secondary-color:rgb(194, 172, 255);
+    --main-font-family:cursive;
+}
+
+.student-main{
+    padding: 10px;
+    background-color:var(--main-color);
+    /* background-color: #fff; */
+    height:100vh;
+}
+.Notes-list-student{
+    background-color:var(--secondary-color);
+    height: 70vh; 
+    width: 90vw;
+    padding: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 30px; */
+    overflow-y: auto;
+}
+.bg{
+    background-color:var(--main-color);
+    padding: 10px;
+}
+.bg h1{
+    font-family: var(--main-font-family);
+}
+.hr-1{
+    padding: 1px;
+    background-color: #fff;
+}
+.announcement-list-student{
+    background-color:var(--secondary-color);
+    height: 50vh; 
+    width: 90vw;
+    padding: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 30px; */
+    overflow-y: auto;
+}
