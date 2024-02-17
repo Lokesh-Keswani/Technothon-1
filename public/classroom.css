@@ -1,14 +1,16 @@
-:root{
-    --main-color:rgb(164, 131, 255);
-    --secondary-color:rgb(194, 172, 255);
-    --main-font-family:cursive;
+:root {
+    --main-color: rgb(121, 121, 121);
+    --secondary-color: rgb(121, 121, 121);
+    --main-font-family: cursive;
 }
-.b{
+
+.b {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
 }
+
 #class {
     background-color: var(--secondary-color);
     border-radius: 8px;

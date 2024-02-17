@@ -1,6 +1,6 @@
 body {
     font-family: cursive;
-    background-color: rgb(164, 131, 255);
+    background-color: rgb(121, 121, 121);
     margin: 0;
     padding: 0;
 }
@@ -12,7 +12,7 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-    background-color: rgb(194, 172, 255);
+    background-color: rgb(121, 121, 121);
 }
 
 
@@ -41,7 +41,7 @@ textarea {
 }
 
 button {
-    background-color: rgb(130, 86, 251);
+    background-color: rgb(121, 121, 121);
     color: #fff;
     padding: 12px 20px;
     border-radius: 50px;
@@ -74,7 +74,7 @@ li strong {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgb(194, 172, 255);
+    background-color: rgb(121, 121, 121);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
 }
