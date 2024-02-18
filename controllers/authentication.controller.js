@@ -1,40 +1,30 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/Users.models.js");
+const bcrypt = require('bcrypt');
 
 router.get("/sign_up", (req, res) => {
   res.render("signUp", { title: "Sign Up" });
 });
 
 router.post("/sign_up", async (req, res) => {
-  const { username, email, password, job } = req.body;
+  const { username, email, password} = req.body;
   if (email.endsWith("@ves.ac.in")) {
-    const existingUser = await User.findOne({ username: "john" });
-
+    // const hashedPassword = await bcrypt.hash(password, 10);
+    const existingUser = await User.findOne({ username: username, email:email });
+    
     if (existingUser) {
       // Handle duplicate username error
       console.log("Username already exists");
       // Add your error handling logic here
       res.redirect("/sign_up");
     } else {
+      const user = User({password: hashedPassword});
       // Proceed with creating and saving the new user
-      const newUser = new User({
-        username: username,
-        email: email,
-        password: password,
-        job: job,
-      });
-      console.log(newUser);
-      try {
-        await newUser.save();
-        res.redirect("/login");
-      } catch {
-        res.redirect("/error");
-      }
+      await user.save();
+      res.redirect("/login");
     }
-  } else {
-    res.redirect("/error");
-  }
+  } 
 });
 
 router.get("/login", (req, res) => {
@@ -42,17 +32,21 @@ router.get("/login", (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  const { username, email, password } = req.body;
   try {
-    const user = await User.findOne({ username: username, password: password });
-    if (user.username == username && user.password == password) {
-      if (user.job == "student") {
-        res.redirect("/dashboard/student");
-      } else if (user.job == "teacher") {
+  const { username, email, password, job} = req.body;
+    const user = await User.findOne({username: username, email: email, password: password, job:job});
+    // const validPassword = await bcrypt.compare(password, user.password);
+    console.log(user.job);
+    if (user) {
+      if (user.job === "student") {
+        console.log("hleo");
+        res.redirect(`/dashboard/student/${user.id}`);
+      } else if (user.job === "teacher") {
         res.redirect("/dashboard/teacher");
-      } else if (user.job == "parent") {
+      } else if (user.job === "parent") {
         res.redirect("/dashboard/parent");
       } else {
+        console.log("error");
         res.redirect("/error");
       }
     }

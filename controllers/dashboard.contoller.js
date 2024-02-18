@@ -10,15 +10,20 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-router.get("/student", async (req, res) => {
+router.get("/student/:id", async (req, res) => {
+  const User = require('../models/Users.models.js');
+  const student_id = req.params.id;
   let notes = await Note.find();
-  let Announcements = await Announcement.find().sort({ createdAt: "desc" });
+  let announcements = await Announcement.find().sort({ createdAt: "desc" });
+  let Users = await User.findOne({student_id});
   res.render("studentDashboard", {
     title: "Student dashboard",
     notes: notes,
-    announcements: Announcements,
+    announcements: announcements,
+    Users:Users,
   });
 });
+
 router.get("/teacher", (req, res) => {
   res.render("teacherDashboard", { title: "Teacher dashboard" });
 });

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -121,21 +122,26 @@ h1 {
     color: #f8f9fa;
 }
 
-
-
 .btn {
     border: none;
     border-radius: 10px;
     padding: 12px 20px;
-    color: var(--main-color);
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
     background-color: #fff;
+    color: black;
+}
+.btn a{
+    color: black;
 }
 
 .btn:hover {
     padding: 13px 23px;
+    color: white;
+}
+button:hover{
+    color:white;
 }
 
 .btn:active {
@@ -152,8 +158,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    /* z-index: -100; */
 }
-
 .container {
     border: 2px solid white;
     padding: 15px;
@@ -182,14 +189,17 @@ h1 {
     margin: 10px;
 }
 
+.job label{
+    font-size: 20px;
+}
 a {
     text-decoration: none;
-    color: var(--main-color);
+    color: black;
 }
 
 .line {
     padding: 1px;
-    background-color: #fff;
+    background-color: black;
     margin: 10px;
 }
 
@@ -203,6 +213,8 @@ p {
     border: 2px solid white;
     padding: 15px;
     border-radius: 20px;
+    background-color: #fff;
+    opacity: 0.9;
 }
 
 .container-l form {
@@ -234,3 +246,64 @@ p {
     margin: 10px;
     font-size: 20px;
 }
+
+.container-s{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    opacity: 0.9;
+    border-radius: 30px;
+  }
+  .main:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* z-index: -100; Adjust opacity here */
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  
+  .input {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    border-radius:10px;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    border-radius:20px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
