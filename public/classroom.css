@@ -1,7 +1,11 @@
 :root {
     --main-color: rgb(121, 121, 121);
     --secondary-color: rgb(121, 121, 121);
-    --main-font-family: cursive;
+    --main-font-family: Arial;
+    background-image: url("https://media.licdn.com/dms/image/D4D1BAQHhoLB2p01i-w/company-background_10000/0/1654498290922/ves_polytechnic_cover?e=1708801200&v=beta&t=iI9MaB2Mc9ucHIKeWsR7mG2Uk4V2bOpBXnYPugh9XHI");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .b {

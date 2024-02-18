@@ -1,5 +1,5 @@
 .teacher-div {
-    font-family: cursive;
+    font-family: Arial;
     margin: 0;
     padding: 0;
     background-color: rgb(121, 121, 121);
@@ -23,7 +23,7 @@ h2 {
     margin-bottom: 60px;
     font-size: 50px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: Arial;
 }
 
 .interface-link {
