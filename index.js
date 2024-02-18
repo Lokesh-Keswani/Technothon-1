@@ -12,8 +12,8 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
-app.use(express.static(path.join(__dirname,'/public')));
-app.use(bodyParser.urlencoded({limit:"10mb", extended:false}));
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 mongoose.connect(process.env.DATABASE_CONNECTION_URL);
 
@@ -21,13 +21,13 @@ const authRouter = require('./controllers/authentication.controller.js');
 const dashboardRouter = require('./controllers/dashboard.contoller');
 
 
-app.get('/', (req,res)=>{
-    res.render('Home', {title:'Home'});
+app.get('/', (req, res) => {
+    res.render('Home', { title: 'Home' });
 });
 
 app.use('/', authRouter);
 app.use('/dashboard', dashboardRouter);
 
-app.listen(PORT, (req,res)=>{
+app.listen(PORT, (req, res) => {
     console.log("Your website is listening on port", PORT);
 });

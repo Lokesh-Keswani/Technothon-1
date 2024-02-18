@@ -5,8 +5,13 @@
 }
 
 :root {
-    --main-color: rgb(247, 247, 247);
-    --secondary-color: rgb(26, 26, 26);
+    --main-color: rgb(121, 121, 121);
+    --secondary-color: rgb(121, 121, 121);
+    --main-font-family: Arial;
+    background-image: url("https://media.licdn.com/dms/image/D4D1BAQHhoLB2p01i-w/company-background_10000/0/1654498290922/ves_polytechnic_cover?e=1708801200&v=beta&t=iI9MaB2Mc9ucHIKeWsR7mG2Uk4V2bOpBXnYPugh9XHI");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* width */
@@ -17,72 +22,105 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgb(119, 119, 119);
+    background: var(--secondary-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(34, 34, 34);
+    background: rgb(1121, 121, 121);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(36, 36, 36);
+    background: rgb(121, 121, 121);
 
 
 }
 
-.loga:hover{
-    color:white;
-}
-/* .nav {
-    background-color: black;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+
+/* CSS for the header */
+/* CSS for the header */
+/* CSS for the header */
+header {
+    background: black;
+    padding: 0.5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-} */
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
 
-/* .nav .left {
-    margin-left: 10px;
-    width: 40vw;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-} */
-
-/* .nav .center {
-    margin-right: 10px;
-} */
-
-/* .nav .center ul {
+/* CSS for the nav bar */
+.nav {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+}
+
+
+
+/* CSS for the logo */
+
+h1 {
+    font-size: 25px;
+}
+
+.logo {
+    height: 50px;
+    /* justify-content: left; */
+
+    /* Adjust the height as needed */
+}
+
+/* CSS for the left side of the nav bar */
+.nav .left {
+    flex: 2;
+    text-align: left;
+    padding-left: 20px;
+    margin-left: 0px;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav .left h1 {
     font-size: 20px;
+}
+
+/* CSS for the center part of the nav bar */
+.nav .center {
+    flex: 2;
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* CSS for the navigation links */
+.nav .center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .center ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 .nav .center ul li a {
     text-decoration: none;
     color: white;
-    margin: 30px;
-} */
-
-/* .nav .center ul li a:hover {
-    opacity: 0.7;
+    transition: color 0.3s ease;
 }
 
-.nav .right {
-    width: 8vw;
-} */
+.nav .center ul li a:hover {
+    color: #f8f9fa;
+}
 
 .btn {
     border: none;
@@ -97,6 +135,7 @@
 .btn a{
     color: black;
 }
+
 .btn:hover {
     padding: 13px 23px;
     color: white;
@@ -112,27 +151,21 @@ button:hover{
 /* sign_up styles */
 
 .main {
-    background-image: url("https://media.licdn.com/dms/image/D4D1BAQHhoLB2p01i-w/company-background_10000/0/1654498290922/ves_polytechnic_cover?e=2147483647&v=beta&t=mwwDUNX3OujP73r8MjqogYMvIO9TDdYaxmroxh8uaRs");
-    background-size: cover;
-    /* Cover the entire background */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    /* Do not repeat the background image */
-    margin: 0;
-    padding: 0;
+    background-color: var(--secondary-color);
+    height: 90vh;
+    font-family: var(--main-font-family);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     /* z-index: -100; */
-
 }
-
 .container {
-    margin-top: 400px;
-    color: white;
-} 
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 20px;
+}
 
 .heading {
     font-size: 40px;
@@ -155,6 +188,7 @@ button:hover{
 .job {
     margin: 10px;
 }
+
 .job label{
     font-size: 20px;
 }
@@ -189,7 +223,7 @@ p {
 }
 
 .container-l form input {
-    border: 1px solid black;
+    border: none;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 15px;

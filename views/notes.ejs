@@ -1,47 +1,55 @@
 <%- include('./header.ejs') %>
 
-<section id="Notes-list">
-  <h2>Notes List</h2>
-  <div class="hr"></div>
-  <div id="notesList">
-    <% notes.forEach(note => { %> <% let cDate = note.createdAt %> <% const
-    monthNames = [ "Jan", "Feb", "March", "April", "May", "June", "July", "Aug",
-    "Sep", "Oct", "Nov", "Dec" ]; %> <% let currentDate = ` ${cDate.getDate()}
-    ${monthNames[cDate.getMonth()]}, ${cDate.getFullYear()} ` %>
-    <div class="notes">
-      <div class="head">
-        <h2 class="notes-title"><%= note.title %></h2>
-        <h2 class="notes-title">Created At: <%= currentDate %></h2>
-      </div>
+
+
+  <section id="section-main">
+    <section id="Notes-list">
+      <h2>Notes List</h2>
       <div class="hr"></div>
-      <p class="notes-content"><%= note.content %></p>
-      <% if (note.fileUrl) { %>
-      <a href="<%= note.fileUrl %>" target="_blank" rel="noopener noreferrer"
-        >File</a
-      >
-      <% } %>
-    </div>
-    <% }); %>
-  </div>
-</section>
-<section id="Upload">
-  <h2>Upload Notes</h2>
-  <!-- enctype="multipart/form-data" -->
+      <div id="notesList">
+        <% notes.forEach(note=> { %> <% let cDate=note.createdAt %>
+            <% const monthNames=[ "Jan" , "Feb" , "March" , "April" , "May" , "June" , "July" , "Aug" , "Sep" , "Oct"
+              , "Nov" , "Dec" ]; %>
+              <% let currentDate=` ${cDate.getDate()} ${monthNames[cDate.getMonth()]}, ${cDate.getFullYear()} ` %>
+                <div class="notes">
+                  <div class="head">
+                    <h2 class="notes-title">
+                      <%= note.title %>
+                    </h2>
+                    <h2 class="notes-title">Created At: <%= currentDate %>
+                    </h2>
+                  </div>
+                  <div class="hr"></div>
+                  <p class="notes-content">
+                    <%= note.content %>
+                  </p>
+                  <% if (note.fileUrl) { %>
+                    <iframe src="<%= note.fileUrl %>" target="_blank" rel="noopener noreferrer">File</iframe>
+                    <% } %>
+                </div>
+                <% }); %>
+      </div>
+    </section>
+    <section id="Upload">
+      <h2>Upload Notes</h2>
+      <!-- enctype="multipart/form-data" -->
 
-  <form action="/dashboard/notes" method="post" id="notesForm">
-    <label for="noteTitle">Note Title:</label>
-    <input type="text" id="noteTitle" name="noteTitle" />
+      <form action="/dashboard/notes" method="post" id="notesForm">
+        <label for="noteTitle">Note Title:</label>
+        <input type="text" id="noteTitle" name="noteTitle" />
 
-    <label for="noteContent">Note Content:</label>
-    <textarea id="noteContent" name="noteContent" rows="4"></textarea>
+        <label for="noteContent">Note Content:</label>
+        <textarea id="noteContent" name="noteContent" rows="4"></textarea>
 
-    <label for="file">Select a document:</label>
-    <input type="file" id="notes-file" name="file" accept=".pdf, .doc, .docx" />
+        <label for="file">Select a document:</label>
+        <input type="file" id="notes-file" name="file" accept=".pdf, .doc, .docx" />
 
-    <center><button type="submit">Upload Note</button></center>
-  </form>
-</section>
-<!-- <script>// notes.js
+        <center><button type="submit">Upload Note</button></center>
+      </form>
+    </section>
+  </section>
+
+  <!-- <script>// notes.js
 
     console.log("ghigh;h");
     
