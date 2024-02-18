@@ -1,18 +1,37 @@
-body {
-    font-family: cursive;
-    background-color: rgb(121, 121, 121);
+main {
+    font-family: Arial;
+
+
+    background-image: url("https://media.licdn.com/dms/image/D4D1BAQHhoLB2p01i-w/company-background_10000/0/1654498290922/ves_polytechnic_cover?e=1708801200&v=beta&t=iI9MaB2Mc9ucHIKeWsR7mG2Uk4V2bOpBXnYPugh9XHI");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+main::before {
     margin: 0;
     padding: 0;
+    content: '';
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 #announcements {
     max-width: 800px;
     margin: 20px auto;
+    margin-top: 5%;
     padding: 20px;
-    background-color: #fff;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-    background-color: rgb(121, 121, 121);
+    background-color: rgb(255, 255, 255, 0.8);
+    opacity: 90%;
 }
 
 
@@ -77,4 +96,6 @@ li strong {
     background-color: rgb(121, 121, 121);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
+    background-color: rgb(255, 255, 255, 0.8);
+    opacity: 90%;
 }
