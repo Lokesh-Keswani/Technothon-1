@@ -1,7 +1,7 @@
 :root{
     --main-color:rgb(164, 131, 255);
     --secondary-color:rgb(194, 172, 255);
-    --main-font-family:cursive;
+    --main-font-family:Arial;
 }
 .b{
     display: flex;
@@ -47,8 +47,8 @@ h1 {
 } */
 
 .a:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 13px 23px;
     transition: 0.5s;
 }

@@ -1,56 +1,59 @@
 <%- include('./header.ejs') %>
-<!-- <div class="bg">
-    <h1>This is the students dashboard</h1>
-    <div class="hr-1"></div>
-</div> -->
-<div class="student-main">
-    <section class="Notes-list-student">
+<div class="main">
 
-        <h2>Notes List</h2>
-        <div class="hr"></div>
-        <div class="notesList-student">
-            <% notes.forEach(note => { %>
-                <% let cDate = note.createdAt %>
-                <% const monthNames = [
-                "Jan", "Feb", "March", "April", "May", "June", 
-                "July", "Aug", "Sep", "Oct", "Nov", "Dec"
-              ];
-               %>
-                <% let currentDate = ` ${cDate.getDate()} ${monthNames[cDate.getMonth()]}, ${cDate.getFullYear()} ` %>
-                <div class="notes">
-                    <div class="head">
-                        <h2 class="notes-title"><%= note.title %></h2>
-                        <h2 class="notes-title">Created At: <%= currentDate %></h2>
+    <div class="container">
+        <h1>Welcome, Learner</h1>
+        <div class="line"></div>
+        <div class="containers p4 ">  
+            <h2>Notes</h2>
+            <% if (notes != null){ %>
+            <% notes.forEach(notes=>{ %>
+            <div class="row ">
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-body bg-primary text-white">
+                      <h5 class="card-title"><%= notes.title%></h5>
+                      <p class="card-text"><%= notes.content%></p>
                     </div>
-                    <div class="hr"></div>
-                    <p class="notes-content"><%= note.content %></p>
-                    <a href='/dashboard/notes/<%= note.id %>'>Read more</a>
+                  </div>
+                </div>
+            </div>
+            <% }); %>
+            <% } %>
+            <div class="line"></div>
+            <h2>Announcements</h2>
+            <% if (announcements != null){ %>
+            <% announcements.forEach(announcements=>{ %>
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="card mb-3">
+                        <div class="card-body bg-success text-white">
+                          <h5 class="card-title"><%= announcements.title%></h5>
+                          <p class="card-text"><%= announcements.content%></p>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             <% }); %>
+            <% } %>
+    
+            <div class="line"></div>
+            <h2>Take Test</h2>
+            <form action="/submit-test" method="post">
+                <div class="form-group">
+                  <label for="question1">Question 1</label>
+                  <input type="text" class="form-control" id="question1" name="question1">
+                </div>
+                <div class="form-group">
+                  <label for="question2">Question 2</label>
+                  <input type="text" class="form-control" id="question2" name="question2">
+                </div>
+                <!-- Add more questions here as needed -->
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
         </div>
-    </section>
-    <section class="announcement-list-student">
-
-            <h2>Announcements</h2>
-            <div class="hr"></div>
-            <div class="announcementList">
-                <% announcements.forEach(announcement => { %>
-                    <% let cDate = announcement.createdAt %>
-                    <% const monthNames = [
-                    "Jan", "Feb", "March", "April", "May", "June", 
-                    "July", "Aug", "Sep", "Oct", "Nov", "Dec"
-                  ];
-                   %>
-                    <% let currentDate = ` ${cDate.getDate()} ${monthNames[cDate.getMonth()]}, ${cDate.getFullYear()} ` %>
-                    <div class="notes">
-                        <div class="head">
-                            <h2 class="notes-title"><%= announcement.title %></h2>
-                            <h2 class="notes-title">Created At: <%= currentDate %></h2>
-                        </div>
-                        <div class="hr"></div>
-                        <p class="notes-content"><%= announcement.content %></p>
-                    </div>
-                <% }); %>
-            </div>
-    </section>
-</div>
+    
+        <!-- Add content for taking tests here -->
+      </div>
+</div>x

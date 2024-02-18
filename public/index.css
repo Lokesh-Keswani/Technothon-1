@@ -1,162 +1,196 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
-    --main-color:rgb(164, 131, 255);
-    --secondary-color:rgb(194, 172, 255);
-    --main-font-family:cursive;
+:root {
+    --main-color: rgb(247, 247, 247);
+    --secondary-color: rgb(26, 26, 26);
 }
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
 
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--secondary-color);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(133, 89, 255);
 }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background:rgb(106, 52, 255);
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(119, 119, 119);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(34, 34, 34);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(36, 36, 36);
 
 
-  }
-  
+}
 
-.nav{
-    background-color:var(--main-color);
+.loga:hover{
+    color:white;
+}
+/* .nav {
+    background-color: black;
     height: 7vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    font-family: var(--main-font-family);
-    border-bottom: 2px solid #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+} */
 
-}
-.nav .left{
+/* .nav .left {
     margin-left: 10px;
-    width: 13vw;
+    width: 40vw;
     color: white;
-    font-family: var(--main-font-family);
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 25px;
-}
-.nav .center{
-    margin-right: 10px;
+    font-size: 18px;
+} */
 
-    /* flex-grow: 1; */
-}
-.nav .center ul{
+/* .nav .center {
+    margin-right: 10px;
+} */
+
+/* .nav .center ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     font-size: 20px;
 }
-.nav .center ul li a{
+
+.nav .center ul li a {
     text-decoration: none;
     color: white;
     margin: 30px;
+} */
+
+/* .nav .center ul li a:hover {
+    opacity: 0.7;
 }
-.nav .center ul li a:hover{
-    opacity:0.7;
-}
-.nav .right{
+
+.nav .right {
     width: 8vw;
-}
-.btn{
+} */
+
+.btn {
     border: none;
     border-radius: 10px;
     padding: 12px 20px;
-    color: var(--main-color);
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
     background-color: #fff;
+    color: black;
 }
-.btn:hover{
+.btn a{
+    color: black;
+}
+.btn:hover {
     padding: 13px 23px;
+    color: white;
 }
-.btn:active{
+button:hover{
+    color:white;
+}
+
+.btn:active {
     opacity: 0.7;
 }
 
 /* sign_up styles */
 
-.main{
-    background-color: var(--secondary-color);
-    height: 90vh;
-    font-family: var(--main-font-family);
-    color: #fff;
+.main {
+    background-image: url("https://media.licdn.com/dms/image/D4D1BAQHhoLB2p01i-w/company-background_10000/0/1654498290922/ves_polytechnic_cover?e=2147483647&v=beta&t=mwwDUNX3OujP73r8MjqogYMvIO9TDdYaxmroxh8uaRs");
+    background-size: cover;
+    /* Cover the entire background */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Do not repeat the background image */
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    /* z-index: -100; */
+
 }
 
-.container{
-    border: 2px solid white;
-    padding: 15px;
-    border-radius: 20px;
-}
+.container {
+    margin-top: 400px;
+    color: white;
+} 
 
-.heading{
+.heading {
     font-size: 40px;
     margin-bottom: 15px;
 }
 
-.container form{
+.container form {
     display: flex;
     flex-direction: column;
 }
 
-.container input{
-    border:none;
-    padding:10px;
+.container input {
+    border: none;
+    padding: 10px;
     margin: 10px;
     border-radius: 10px;
     height: 4vh;
 }
 
-.job{
+.job {
     margin: 10px;
 }
-a{
+.job label{
+    font-size: 20px;
+}
+a {
     text-decoration: none;
-    color: var(--main-color);
+    color: black;
 }
-.line{
+
+.line {
     padding: 1px;
-    background-color: #fff;
+    background-color: black;
     margin: 10px;
 }
-p{
+
+p {
     padding-bottom: 10px;
 }
 
 /* login styles */
 
-.container-l{
+.container-l {
     border: 2px solid white;
     padding: 15px;
     border-radius: 20px;
+    background-color: #fff;
+    opacity: 0.9;
 }
-.container-l form{
+
+.container-l form {
     display: flex;
     flex-direction: column;
 }
 
-.container-l form input{
-    border:none;
-    padding:10px;
+.container-l form input {
+    border: 1px solid black;
+    padding: 10px;
     margin-top: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -166,14 +200,76 @@ p{
 
 /* Error page styles */
 
-.error-container{
+.error-container {
     border: 2px solid white;
     border-radius: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
-.error-container p{
+
+.error-container p {
     margin: 10px;
     font-size: 20px;
 }
+
+.container-s{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    opacity: 0.9;
+    border-radius: 30px;
+  }
+  .main:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* z-index: -100; Adjust opacity here */
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  
+  .input {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    border-radius:10px;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    border-radius:20px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }

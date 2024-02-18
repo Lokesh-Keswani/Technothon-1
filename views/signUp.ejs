@@ -1,11 +1,11 @@
 <%- include('./header.ejs') %>
 <div class="main">
-    <div class="container">
-        <h1 class="heading"><%= title%> Now</h1>
+    <!-- <div class="container-s">
+        <h1 class="heading-s"> Now</h1>
         <div class="line"></div>
         <form action="/sign_up" method="post">
-            <input required type="text" name="username" placeholder="username">
-            <input required type="email" name="email" placeholder="vesp email id">
+            <input required type="text" name="username" placeholder="username"><br>
+            <input required type="email" name="email" placeholder="vesp email id"><br>
             <input required type="password" name="password" placeholder="password">
             <div class="job">
                 <p>Choose your occupation:</p>
@@ -22,4 +22,26 @@
             <button class="btn" type="button"><a href="/login">Login</a></button>
         </form>
     </div>
-</div>
+</div> -->
+<div class="container-s">
+    <h1 class="title"><%= title%></h1>
+    <form action="/sign_up" method="post">
+      <div class="form-group">
+        <label for="name" class="label">Name:</label>
+        <input type="text" id="name" name="name" class="input" placeholder="Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="label">Email:</label>
+        <input type="email" id="email" name="email" class="input" placeholder="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password" class="label">Password:</label>
+        <input type="password" id="password" name="password" class="input" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="roll" class="label">Roll:</label>
+        <input type="text" id="roll" name="roll" class="input" placeholder="Job" required>
+      </div>
+      <button type="submit" class="button">Sign Up</button>
+    </form>
+  </div>
